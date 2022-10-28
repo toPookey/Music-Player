@@ -1,0 +1,17 @@
+/* components/menu-cell/menu-cell.wxss */
+
+
+
+.bg-background {
+  z-index: 9;
+}
+
+.song-list .active {
+
+  color: greenyellow;
+}
+
+
+
+
+

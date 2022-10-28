@@ -1,0 +1,43 @@
+/* components/nav-bar/nav-bar.wxss */
+.nav-bar .status{
+  
+  height: 20px;
+
+}
+
+.nav {
+  display: flex;
+  height: 44px;
+  color: #fff;
+}
+
+.nav .left, .nav .right {
+  width: 120rpx;
+  
+}
+.nav .left, .nav .content, .nav.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav .content {
+  flex: 1;
+}
+
+.default {
+  display: none;
+}
+.slot:empty + .default{
+
+ display: flex;
+
+}
+
+
+.left .icon {
+ width: 40rpx;
+ height: 40rpx;
+
+}
+
+

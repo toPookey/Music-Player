@@ -1,0 +1,18 @@
+/* components/menu-area/menu-area.wxss */
+/* 歌单的样式 */
+.menu {
+  /* display: flex; */
+  white-space: nowrap;
+  margin-left: -24rpx;
+
+}
+
+.menu .list {
+  /* flex-shrink:0;  */
+  display: inline-block;
+  width: 220rpx;
+  margin-left: 24rpx;
+}
+.menu .list:last-of-type {
+  margin-right: 24rpx;
+}

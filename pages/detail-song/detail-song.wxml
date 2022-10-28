@@ -1,0 +1,27 @@
+<!--pages/detail-song/detail-song.wxml-->
+<view class="header" wx:if="{{type === 'menu' && songInfos.name}}">
+<menu-header songInfo="{{songInfos}}"></menu-header>
+</view>
+
+<section-header
+ wx:else title="{{songInfos.name}}"
+  hasMore="{{false}}" 
+  isHistory="{{tabsName === 'history' ? true : false}}"
+  bind:onClearTap="onClearTap"
+  ></section-header>
+<view class="song-list">
+<block wx:for="{{songInfos.tracks}}" wx:key="id">
+<song-item-v2 
+itemData="{{item}}" 
+index="{{index + 1}}"
+menuList= "{{menuList}}"
+data-index="{{index}}"
+bindtap="onSongItemTap"
+bind:cancelFavorTap="cancelFavorTap"
+bind:cancelLikeTap="cancelLikeTap"
+></song-item-v2>
+</block>
+
+</view>
+
+

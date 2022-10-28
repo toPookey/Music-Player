@@ -1,0 +1,30 @@
+<!--components/menu-cell/menu-cell.wxml-->
+
+
+<van-popup show="{{onShowPop}}" bind:close="onClose" 
+   position="bottom"
+  custom-style="height: 50%; background-color: rgba(0,0,0,.8); color: #fff;"
+  round
+  class="bg-background"
+> 
+
+<block wx:for="{{songList}}" wx:key="id">
+ <view class="song-list">
+  <song-item-v2 itemData= "{{item}}" index="{{index + 1}}"
+   class="{{songIndex  === index ? 'active': ''}}"
+   data-index="{{index}}"
+   bindtap="onIndexTap"
+   menuList="{{menuList}}"
+   ></song-item-v2>
+ </view>
+</block>
+
+
+</van-popup>
+
+
+
+
+
+
+

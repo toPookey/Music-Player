@@ -1,0 +1,21 @@
+<!--components/video-item2/vedio-item2.wxml-->
+<!--components/video-list-item2/index.wxml-->
+<wxs module="fmt" src="/utils/fomat.wxs"></wxs>
+
+<view class="scroll" >
+  <view class="item">
+  <view class="album">
+    <image class="image" mode="widthFix" src="{{itemInfo.coverUrl}}"></image>
+    <view class="info">
+      <text class="count">{{fmt.countFormat(itemInfo.playTime)}}</text>
+    </view>
+  </view>
+  <view class="content">
+    <view class="title">{{itemInfo.title}}</view>
+    <view class="nickname">{{itemInfo.creator[0].userName}}</view>
+  </view>
+</view>
+</view>
+
+
+

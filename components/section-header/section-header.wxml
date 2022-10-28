@@ -1,0 +1,14 @@
+<!--components/section-header/section-header.wxml-->
+
+<view class="header">
+  <view class="title">{{title}}</view>
+  <view class="right" bindtap="onMore"  wx:if="{{hasMore}}">
+  <text class="text">更多</text>
+  <van-icon name="arrow" />
+  </view>
+  <view class="right" wx:if="{{isHistory}}" bindtap="onClearTap">
+  <view class="text">清空全部</view>
+  </view>
+</view>
+
+

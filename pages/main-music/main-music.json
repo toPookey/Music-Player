@@ -1,0 +1,14 @@
+{
+  "navigationBarBackgroundColor": "#fafafa",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "section-header": "/components/section-header/section-header",
+    "song-item-v1": "/components/song-item-v1/song-item-v1",
+    "menu-area" : "/components/menu-area/menu-area",
+    "ranking-item" : "/components/ranking-item/ranking-item",
+    "menu-cell" : "/components/menu-cell/menu-cell"
+    
+
+  }
+}

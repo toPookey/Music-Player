@@ -1,0 +1,5 @@
+/* pages/detail-song/detail-song.wxss */
+page {
+  box-sizing: border-box;
+  padding: 0 24rpx;
+}

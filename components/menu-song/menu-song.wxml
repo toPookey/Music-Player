@@ -1,0 +1,11 @@
+<!--components/menu-song/menu-song.wxml-->
+<wxs module="fmt" src="../../utils/fomat.wxs"></wxs>
+<view class="item" bindtap="songItemClick"  bindtap="onMenuTap">
+  <view class="top">
+    <image class="image" mode="widthFix" src="{{itemData.coverImgUrl}}"></image>
+    <view class="play-counter">{{fmt.countFormat(itemData.playCount)}}</view>
+  </view>
+  <view class="bottom">
+    {{itemData.name}}
+  </view>
+</view>

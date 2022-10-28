@@ -1,0 +1,38 @@
+/* pages/detail-vedio/detai-vedio.wxss */
+
+/* pages/detail-video/index.wxss */
+page {
+  /* padding-top: 450rpx; */
+  height: 100vh;
+}
+.video {
+  width: 100%;
+  /* position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%; */
+  
+}
+
+.content{
+  height: calc(100% - 450rpx);
+}
+
+.info {
+  padding: 30rpx;
+}
+
+.info .title {
+  font-weight: 700;
+}
+
+.info .desc, .info .other {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  color: #666;
+}
+
+/* 相关视频 */
+.recommend {
+  padding: 30rpx;
+}

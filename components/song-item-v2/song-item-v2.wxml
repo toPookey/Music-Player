@@ -1,0 +1,14 @@
+<!--components/song-item-v2/song-item-v2.wxml-->
+<view class="item" bindtap="onSongTap">
+  <view class="index app-color">{{index}}</view>
+  <view class="info">
+    <view class="name">{{itemData.name}}</view>
+    <view class="source">
+      <image class="icon" src="/assets/images/icons/sq_icon.png"></image>
+      <text >{{itemData.ar[0].name || itemData.artists[0].name}}</text>
+      
+    </view>
+  </view>
+  <van-icon class="more-icon" name="more-o" catchtap="onMoreTap" />
+</view>
+

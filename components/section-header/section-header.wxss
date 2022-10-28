@@ -1,0 +1,27 @@
+/* components/section-header/section-header.wxss */
+
+.header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 32rpx 0;
+
+}
+
+.header .title {
+font-size: 36rpx;
+font-weight: 700;
+color: #000000;
+
+}
+
+.header .right{
+  display: flex;
+  align-items: center;
+  font-size: 36rpx;
+  color: #888;
+
+}
+.header .right .text{
+  font-size: 28rpx;
+}

@@ -1,0 +1,102 @@
+<!--pages/main-music/main-music.wxml-->
+<!-- 搜索框 -->
+<van-search
+  value="{{searchValue }}"
+  shape="round"
+  background="#fafafa"
+  placeholder="请输入搜索关键词"
+  bind:click-input= "onSearchClick"
+/>
+<!-- 轮播图 -->
+<swiper 
+class="banner"
+circular
+indicator-dots
+style="height: {{bannerHeight}}px;"
+wx:if="{{bannerUrl.length}}"
+>
+  <block wx:for="{{bannerUrl}}" wx:key="targetId">
+<swiper-item class="item" >
+  <image 
+  class="banner-image" 
+  src="{{item.imageUrl}}" 
+  mode="widthFix"
+  bindload="onImgLoad"
+  ></image>
+</swiper-item>
+</block>
+</swiper>
+
+<!-- 推荐歌曲 -->
+<view class="recommend" wx:if="{{recomSongs.length}}">
+  <section-header title = "推荐歌曲" bind:onMoreClick = "onRecommond"></section-header>
+  <view class="list">
+  <block wx:for="{{recomSongs}}" wx:key="id">
+  <song-item-v1 itemData = "{{item}}" bindtap="onSongItemTap" data-index="{{index}}"></song-item-v1>
+  
+  </block>
+  </view>
+
+</view>
+
+<!-- 热门歌单 -->
+
+
+<menu-area title="热门歌单" hotMenu="{{hotMenu}}" screenWidth="{{screenWidth}}" ></menu-area>
+
+<!-- 推荐歌单 -->
+
+<menu-area title="推荐歌单" hotMenu="{{recommendMenu}}" screenWidth="{{screenWidth}}" ></menu-area> 
+<!-- 巅峰榜 -->
+
+<view class="ranking">
+<section-header title = "巅峰榜" hasMore="{{false}}"></section-header>
+<view class="ranking-list">
+<block wx:for="{{rankingInfos}}" wx:key="id">
+<ranking-item itemData= "{{item}}" key="{{index}}"></ranking-item>
+</block>
+
+</view>
+
+</view>
+
+
+<!-- 播放栏 -->
+
+<view class="play-bar-placeholder" wx:if="{{songInfo.id}}"></view>
+
+<view class="play-bar" wx:if="{{songInfo.id}}">
+  <view class="left">
+    <image 
+      class="album album-anim" 
+      mode="aspectFill" 
+      src="{{songInfo.al.picUrl}}"
+      style="animation-play-state: {{isPalying ? 'running' : 'paused'}};"
+      bindtap="onAlbumTap"
+    />
+    <view class="name">{{songInfo.name}}</view>
+  </view>
+  <view class="right">
+    <image 
+      class="icon play"
+      src="/assets/images/music/{{ isPalying ? 'pause': 'play' }}_icon.png"
+      bindtap="onPlayOrPauseTap"
+    />
+    <image 
+     class="icon playlist"
+      src="/assets/images/music/playlist_icon.png"
+     bindtap="ListTap"
+     />
+  </view>
+</view>
+<menu-cell songList="{{palyerSong}}" songIndex = "{{palyerIndex}}" class="menu-cell" ></menu-cell>
+
+
+
+
+
+
+
+
+
+

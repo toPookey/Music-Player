@@ -1,0 +1,11 @@
+
+
+  function modeType (index) {
+    var Arr = ["order","random","repeat"]
+   
+    return Arr[index]
+
+}
+module.exports = {
+  modeType: modeType
+}
